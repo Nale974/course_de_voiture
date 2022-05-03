@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 561899830}
   - component: {fileID: 561899829}
   - component: {fileID: 561899828}
+  - component: {fileID: 561899831}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -227,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -686, y: -369.5}
+  m_AnchoredPosition: {x: -8, y: -46}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561899828
@@ -274,8 +275,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 561899831}
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SecondScene
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -324,6 +337,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561899826}
   m_CullTransparentMesh: 1
+--- !u!114 &561899831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561899826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096ee04cc6fb52946aaf57e844fe523f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &750589402
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -494,8 +519,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215688, g: 0.30663213, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.41509432, g: 0.40491277, b: 0.40491277, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -536,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 156.3, y: 1, z: -889}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -578,7 +603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716, y: -334.5}
+  m_AnchoredPosition: {x: 52, y: 95}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385228253
@@ -601,7 +626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: CAR RACE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -610,31 +635,31 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4278452479
+  m_fontColor: {r: 1, g: 0, b: 0.015576839, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0, b: 0, a: 1}
+    topRight: {r: 1, g: 0, b: 0, a: 1}
+    bottomLeft: {r: 0.3301887, g: 0.19749022, b: 0.19749022, a: 1}
+    bottomRight: {r: 0.2735849, g: 0.19460662, b: 0.19460662, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 35.8
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -664,7 +689,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -106.99457, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
